@@ -1,5 +1,5 @@
 :root {
-    --player-slot:clamp(208px, 31svh, 268px);
+    --player-slot:clamp(220px, 33svh, 286px);
     --player-gap:10px;
     --ink:#23304e; --muted:#65708c; --pink:#ff8db6; --mint:#a9f1da; --yellow:#ffe17a; --blue:#91bbff; --purple:#7f6cff;
     --shadow:0 18px 0 rgba(127,108,255,.11), 0 18px 34px rgba(47,63,103,.18); --radius:26px;
