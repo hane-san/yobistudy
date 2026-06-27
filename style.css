@@ -1,5 +1,5 @@
 :root {
-    --player-slot:clamp(220px, 33svh, 286px);
+    --player-slot:clamp(208px, 31svh, 268px);
     --player-gap:10px;
     --ink:#23304e; --muted:#65708c; --pink:#ff8db6; --mint:#a9f1da; --yellow:#ffe17a; --blue:#91bbff; --purple:#7f6cff;
     --shadow:0 18px 0 rgba(127,108,255,.11), 0 18px 34px rgba(47,63,103,.18); --radius:26px;
@@ -323,7 +323,7 @@
   body { min-height:100svh; }
 }
 @media (max-height: 720px) {
-  :root { --player-slot:clamp(200px, 30svh, 244px); }
+  :root { --player-slot:clamp(250px, 32svh, 310px); }
   .pagerCard, .randomCard {
     font-size:clamp(15px,4.1vw,20px);
     line-height:1.66;
@@ -332,6 +332,6 @@
   .bottomNav button { padding:8px 6px; }
 }
 @media (min-height: 820px) {
-  :root { --player-slot:clamp(250px, 33svh, 300px); }
+  :root { --player-slot:clamp(315px, 36svh, 380px); }
 }
 
