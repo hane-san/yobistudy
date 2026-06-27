@@ -1,0 +1,17 @@
+{
+  "name": "六法ねこカード",
+  "short_name": "六法ねこ",
+  "description": "六法と猫の一問一答カード学習アプリ",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff6ee",
+  "theme_color": "#7f6cff",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

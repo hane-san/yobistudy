@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>六法ねこカード</title>
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-candidate-1.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#7f6cff">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="topbar"><p class="tinyTitle">会社法 一問一答カード</p></div>
+    <div class="selectRow">
+      <label class="selectBox">科目<select id="subjectSelect"></select></label>
+      <label class="selectBox"><span id="filterLabel">条文番号</span><select id="categorySelect"></select></label>
+    </div>
+  </header>
+  <div class="miniPlayerSlot" aria-hidden="true"><div class="miniPlayerFrame"></div></div>
+  <main id="categoryView"></main>
+  <main id="randomView" hidden>
+    <div class="randomWrap">
+      <div class="sectionHead pagerHead randomSpacer" aria-hidden="true"><h2>ランダム</h2><span class="count">&nbsp;</span></div>
+      <article id="randomCard" class="randomCard" role="button" aria-label="ランダムカードを読み上げる" tabindex="0"></article>
+      <div class="controls">
+        <button id="shrinkBtnRandom" class="mini shrinkBtn" type="button">長押しで全文表示</button>
+      </div>
+    </div>
+  </main>
+  <nav class="bottomNav" aria-label="表示モード切替">
+    <button id="categoryBtn" type="button">カテゴリ</button>
+    <button id="articleBtn" class="active" type="button">条文番号</button>
+    <button id="randomBtn" type="button">ランダム</button>
+  </nav>
+</div>
+<script>window.CARD_FILES = ["cards/company.json"];</script>
+<script src="app.js" type="module"></script>
+</body>
+</html>
