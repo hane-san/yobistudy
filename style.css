@@ -325,7 +325,7 @@
 @media (max-height: 720px) {
   :root { --player-slot:clamp(68px, 10svh, 104px); }
   .pagerCard, .randomCard {
-    font-size:clamp(32px,4.5vw,64px);
+    font-size:clamp(15px,4.1vw,20px);
     line-height:1.66;
   }
   .shrinkBtn { padding:9px 12px; }
