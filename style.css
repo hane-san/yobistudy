@@ -323,7 +323,7 @@
   body { min-height:100svh; }
 }
 @media (max-height: 720px) {
-  :root { --player-slot:clamp(188px, 28svh, 228px); }
+  :root { --player-slot:clamp(200px, 30svh, 244px); }
   .pagerCard, .randomCard {
     font-size:clamp(15px,4.1vw,20px);
     line-height:1.66;
@@ -332,6 +332,6 @@
   .bottomNav button { padding:8px 6px; }
 }
 @media (min-height: 820px) {
-  :root { --player-slot:clamp(238px, 31svh, 286px); }
+  :root { --player-slot:clamp(250px, 33svh, 300px); }
 }
 
