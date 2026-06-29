@@ -1,7 +1,7 @@
 {
-  "name": "六法ねこカード",
-  "short_name": "六法ねこ",
-  "description": "六法と猫の一問一答カード学習アプリ",
+  "name": "予備試験 一問一答カード",
+  "short_name": "予備試験カード",
+  "description": "予備試験の一問一答カード学習アプリ",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#fff6ee",
