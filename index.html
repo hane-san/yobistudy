@@ -33,11 +33,16 @@
   </main>
   <nav class="bottomNav" aria-label="表示モード切替">
     <button id="categoryBtn" type="button">カテゴリ</button>
-    <button id="articleBtn" class="active" type="button">条文番号</button>
-    <button id="randomBtn" type="button">ランダム</button>
+    <button id="articleBtn" type="button">条文番号</button>
+    <button id="randomBtn" class="active" type="button">ランダム</button>
   </nav>
 </div>
-<script>window.CARD_FILES = ["cards/company.json", "cards/minso.json"];</script>
+<script>window.CARD_FILES = ["cards/company.json", "cards/minso.json", "cards/minso_oral.json", "cards/minso_records.json", "cards/minso_evidence.json", "cards/minso_benron.json"];</script>
 <script src="app.js" type="module"></script>
+<script>
+window.addEventListener('load', () => {
+  document.getElementById('randomBtn')?.click();
+}, { once: true });
+</script>
 </body>
 </html>
