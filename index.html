@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>六法ねこカード</title>
+<title>予備試験 一問一答カード</title>
 <link rel="stylesheet" href="style.css">
 
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/icon-candidate-1.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.svg">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#7f6cff">
 </head>
@@ -40,9 +40,14 @@
 <script>window.CARD_FILES = ["cards/company.json", "cards/minso.json", "cards/minso_oral.json", "cards/minso_records.json", "cards/minso_evidence.json", "cards/minso_benron.json"];</script>
 <script src="app.js" type="module"></script>
 <script>
-window.addEventListener('load', () => {
-  document.getElementById('randomBtn')?.click();
-}, { once: true });
+(() => {
+  const openRandom = () => document.getElementById('randomBtn')?.click();
+  window.addEventListener('load', () => {
+    openRandom();
+    setTimeout(openRandom, 80);
+    setTimeout(openRandom, 260);
+  }, { once: true });
+})();
 </script>
 </body>
 </html>
