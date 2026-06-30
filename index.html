@@ -47,6 +47,39 @@
     setTimeout(openRandom, 80);
     setTimeout(openRandom, 260);
   }, { once: true });
+
+  let sx = 0;
+  let sy = 0;
+  let st = 0;
+  document.addEventListener('touchstart', event => {
+    if (!document.getElementById('randomBtn')?.classList.contains('active')) return;
+    const t = event.changedTouches && event.changedTouches[0];
+    if (!t) return;
+    sx = t.clientX;
+    sy = t.clientY;
+    st = Date.now();
+  }, { capture: true, passive: true });
+
+  document.addEventListener('touchend', event => {
+    if (!document.getElementById('randomBtn')?.classList.contains('active')) return;
+    const stage = event.target && event.target.closest && event.target.closest('#pagerStage');
+    if (!stage) return;
+    const t = event.changedTouches && event.changedTouches[0];
+    if (!t) return;
+    const dx = t.clientX - sx;
+    const dy = t.clientY - sy;
+    const dt = Math.max(Date.now() - st, 1);
+    const absX = Math.abs(dx);
+    const absY = Math.abs(dy);
+    const dist = Math.max(absX, absY);
+    const velocity = dist / dt;
+    const isSwipe = dist >= 26 && (dt <= 300 || velocity >= 0.2);
+    if (isSwipe && absY >= absX * 0.72) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      openRandom();
+    }
+  }, { capture: true, passive: false });
 })();
 </script>
 </body>
